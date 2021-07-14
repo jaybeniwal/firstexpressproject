@@ -17,7 +17,9 @@ app.get("/",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.render('about.hbs');
 })
-
+app.get("*",(req,res)=>{
+    res.render('index.hbs');
+})
 app.listen(port, hostname, () => {
     console.log(`server is running at http://${hostname}:${port}`);
 })
